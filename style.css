@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #070032;
+    color: white;
+    background-image: url('images/stars-background.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-transform: uppercase;
+  }
+  
+  .navbar nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .hero-text h1, .hero-text h2 {
+    color: #5ab9ff;
+    margin: 10px 0;
+  }
+  
+  .hero button, .cta button {
+    background-color: #5ab9ff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+  }
+  
+  .perks {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .perks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .perk-card {
+    background-color: #9900ff;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .testimonials {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .demo-video {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .video-placeholder {
+    background-color: #4d90fe;
+    height: 250px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  
+  .cta {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .cta-characters img {
+    height: 100px;
+    margin: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+  }
+  
