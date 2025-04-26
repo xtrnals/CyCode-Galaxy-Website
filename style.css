@@ -75,29 +75,34 @@ body {
   margin: 10px 0; /* Add spacing between h1 and h2 */
 }
 
-.hero-text p {
-  font-size: 1rem; /* Adjust font size for paragraph */
-  color: white; /* Match the white color */
-  line-height: 1.5; /* Adjust line height for readability */
-  margin: 20px 0; /* Add spacing below the paragraph */
+.hero-text {
+  flex: none; /* Prevent flexbox from stretching the text */
+  margin-right: 50px; /* Keep spacing between text and image */
+  max-width: 700px; /* Limit the width of the text block */
+  text-align: center; /* Center-align all text and the button */
 }
+
 
 .hero-text button {
   background-color: #5ab9ff; /* Match the button color */
   color: white; /* Button text color */
   border: none; /* Remove border */
-  padding: 10px 20px; /* Adjust padding */
-  font-size: 1rem; /* Adjust font size */
+  padding: 20px 75px; /* Increase padding for a larger button */
+  font-size: 1.5rem; /* Set a consistent font size */
   font-weight: bold; /* Make text bold */
-  border-radius: 15px; /* Add rounded corners */
+  font-family: 'Press Start 2P', monos; /* Match the font with other texts */
+  border-radius: 50px; /* Add rounded corners */
   cursor: pointer; /* Add pointer cursor */
   text-transform: uppercase; /* Make button text uppercase */
-} 
+  width: auto; /* Allow the button to adjust its width automatically */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Add a more prominent shadow */
+  margin: 20px auto 0; /* Center the button and add spacing above */
+  display: inline-block; /* Ensure the button respects the centering */
+}
   
   .hero button, .cta button {
     background-color: #5ab9ff;
     border: none;
-    padding: 10px 20px;
     margin-top: 15px;
     font-weight: bold;
     border-radius: 15px;
@@ -107,19 +112,55 @@ body {
   .perks {
     text-align: center;
     padding: 60px 20px;
+    color: white; /* Ensure text is readable */
   }
-  
+
+  .perks h2 {
+    font-size: 2.5rem; /* Make the heading stand out */
+    margin-bottom: 20px;
+    color: #5ab9ff; /* Use a bright color for the heading */
+  }
+
   .perks-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for a 2x3 layout */
+    gap: 30px; /* Add spacing between cards */
     margin-top: 20px;
   }
-  
+
   .perk-card {
-    background-color: #9900ff;
-    padding: 30px;
-    border-radius: 10px;
+    background-color: #1e1e2f; /* Dark card background */
+    color: white; /* Text color */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    text-align: center; /* Center-align all text */
+  }
+
+  .perk-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+  }
+
+  .perk-card strong {
+    color: #5ab9ff; /* Highlight the title */
+    font-size: 1.2rem; /* Make the title stand out */
+    display: block; /* Ensure the title is on its own line */
+    margin-bottom: 10px; /* Add spacing below the title */
+  }
+  
+  .perk-card p {
+    font-size: 0.8rem; /* Make the subtext slightly smaller */
+    line-height: 1.4; /* Adjust line height for better readability */
+    margin: 0; /* Remove unnecessary margins */
+  }
+
+  .perk-subtext {
+    font-size: 0.75rem; /* Make the subtext smaller */
+    line-height: 1.4; /* Adjust line height for better readability */
+    color: #d3d3d3; /* Use a lighter color for the subtext */
+    margin: 0; /* Remove unnecessary margins */
   }
   
   .testimonials {
@@ -198,6 +239,12 @@ body {
     max-height: 60vh; /* Adjust the height for smaller screens */
   }
 
+  /* Hero text button adjustments */
+  .hero-text button {
+    padding: 20px 75px; /* Keep the same padding as the default */
+    font-size: 1.5rem; /* Keep the same font size */
+  }
+
   /* Perks section adjustments */
   .perks-grid {
     grid-template-columns: 1fr; /* Single column layout */
@@ -238,6 +285,11 @@ body {
   .hero-img img {
     max-width: 90%; /* Further reduce the width */
     max-height: 50vh; /* Further reduce the height */
+  }
+
+  .hero-text button {
+    padding: 20px 75px; /* Keep the same padding as the default */
+    font-size: 1.5rem; /* Keep the same font size */
   }
 
   .perks-grid {
