@@ -9,18 +9,57 @@ body {
     font-family: 'Press Start 2P', monospace;
   }
   
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    text-transform: uppercase;
-  }
-  
-  .navbar nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-  }
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px; /* Add spacing between links */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem; /* Make the text smaller */
+  transition: color 0.3s ease; /* Add a hover effect */
+}
+
+nav ul li a:hover {
+  color: #5ab9ff; /* Change color on hover */
+}
+
+/* Lessons Preview Section */
+#lessons-preview {
+  text-align: center;
+  padding: 50px;
+  color: #fff;
+}
+
+.lesson-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #1e1e3f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+}
   
   html {
     scroll-behavior: smooth;
@@ -198,6 +237,262 @@ body {
     color: white;
   }
   
+
+/* Mission Section */
+.mission {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-around; /* Bring text and image closer together */
+  padding: 40px 50px; /* Reduce top and bottom padding */
+  height: calc(90vh - 80px); /* Adjust height to account for the navbar */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mission-content {
+  max-width: 45%; /* Slightly reduce the width of the text content */
+  text-align: left; /* Align text to the left */
+}
+
+.mission h1 {
+  font-size: 3rem; /* Larger font size for the heading */
+  color: #5ab9ff;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Keep text uppercase */
+  text-align: center; /* Center-align the heading */
+}
+
+.mission p {
+  font-size: 1.2rem; /* Slightly smaller font for the subtext */
+  margin: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+.mission button {
+  background-color: #5ab9ff; /* Match the button color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 20px 75px; /* Increase padding for a larger button */
+  font-size: 1.5rem; /* Set a consistent font size */
+  font-weight: bold; /* Make text bold */
+  font-family: 'Press Start 2P', monos; /* Match the font with other texts */
+  border-radius: 50px; /* Add rounded corners */
+  cursor: pointer; /* Add pointer cursor */
+  text-transform: uppercase; /* Make button text uppercase */
+  width: auto; /* Allow the button to adjust its width automatically */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Add a more prominent shadow */
+  margin: 20px auto 0; /* Center the button and add spacing above */
+  display: block; /* Ensure the button respects the centering */
+}
+
+.mission-img {
+  max-width: 45%; /* Slightly reduce the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mission {
+    flex-direction: column; /* Stack text and image vertically */
+    text-align: center; /* Center-align text */
+  }
+
+  .mission-content {
+    max-width: 100%; /* Allow full width for text */
+    margin-bottom: 20px; /* Add spacing below text */
+  }
+
+  .mission-img {
+    max-width: 80%; /* Reduce image size */
+  }
+}
+
+@media (max-width: 768px) {
+  .mission h1 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .mission p {
+    font-size: 1rem; /* Reduce paragraph size */
+  }
+
+  .mission button {
+    font-size: 0.9rem; /* Reduce button size */
+    padding: 10px 20px; /* Adjust button padding */
+  }
+
+  .mission-img {
+    max-width: 90%; /* Further reduce image size */
+  }
+}
+
+/* Why Cybersecurity Section */
+.why-cybersecurity {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center both grid and text horizontally */
+  padding: 0;              /* Remove left padding */
+  gap: 400px;               /* Slightly more space between grid and text */
+  width: 100vw;
+  min-height: 90vh;
+  box-sizing: border-box;
+}
+
+.cyber-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  width: 380px;
+  height: 380px;
+  align-self: center;
+}
+
+.cyber-box {
+  background: linear-gradient(135deg, #3486c7 70%, #205a8c 100%);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 rgba(52,134,199,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 22px 14px 16px 14px;
+  box-sizing: border-box;
+  width: 230px;
+  height: 230px;
+  text-align: center;
+  color: #0a1a3a;
+  position: relative;
+  transition: 
+    transform 0.22s cubic-bezier(.4,2,.6,1),
+    box-shadow 0.22s cubic-bezier(.4,2,.6,1),
+    background 0.22s cubic-bezier(.4,2,.6,1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cyber-box:hover, .cyber-box:focus-visible {
+  transform: translateY(-10px) scale(1.045) rotate(-1deg);
+  box-shadow: 0 12px 36px 0 rgba(90,185,255,0.28);
+  background: linear-gradient(135deg, #6fd0ff 80%, #4a9fff 100%);
+  z-index: 2;
+}
+
+.cyber-icon {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+  display: block;
+  transition: transform 0.22s cubic-bezier(.4,2,.6,1);
+}
+
+.cyber-box:hover .cyber-icon,
+.cyber-box:focus-visible .cyber-icon {
+  transform: scale(1.18) rotate(-8deg);
+}
+
+.cyber-box h3 {
+  font-size: 1.13rem;
+  margin: 8px 0 6px 0;
+  font-family: 'Press Start 2P', monospace;
+  color: #0a1a3a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cyber-box p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #0a1a3a;
+  font-family: Arial, sans-serif;
+  line-height: 1.3;
+  margin-top: 8px;
+  opacity: 0.92;
+  transition: color 0.2s;
+}
+
+.cyber-box:hover p,
+.cyber-box:focus-visible p {
+  color: #174a6c;
+}
+
+.why-cybersecurity-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px; /* Match the grid height */
+  max-width: 400px;
+  text-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.why-cybersecurity h2 {
+  font-size: 2rem; /* Slightly smaller heading */
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.why-cybersecurity p {
+  font-size: 0.82rem; /* Smaller font size */
+  color: #fff;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+  font-weight: normal;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+  letter-spacing: 0.1px;
+  text-shadow: 1px 2px 6px #000, 0 1px 0 #222;
+  padding-top: 125px;
+  align-self: flex-start;
+  box-sizing: border-box;
+}
+
+/* What Makes Us Different Section */
+.difference {
+  text-align: center;
+  padding: 100px 20px; /* Add more padding for spacing */
+  position: relative;
+}
+
+.difference h2 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  margin-bottom: 30px;
+}
+
+.difference ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 2;
+  text-align: left; /* Align text to the left */
+  display: inline-block; /* Center the list */
+}
+
+.difference-img {
+  position: absolute;
+  top: 50px; /* Adjust position */
+  right: 50px; /* Adjust position */
+  width: 200px; /* Larger image size */
+}
+
+/* Quote Section */
+.quote-section {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 2rem; /* Larger font size for quotes */
+  color: #5ab9ff; /* Blue color for quotes */
+}
+
+.quote-section .quote {
+  font-size: 3rem; /* Larger quote marks */
+  color: #5ab9ff;
+}
+
 /* Adjustments for smaller screens */
 @media (max-width: 1024px) {
   .hero-img {
