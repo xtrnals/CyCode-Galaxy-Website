@@ -480,17 +480,113 @@ nav ul li a:hover {
   width: 200px; /* Larger image size */
 }
 
-/* Quote Section */
-.quote-section {
-  text-align: center;
-  padding: 50px 20px;
-  font-size: 2rem; /* Larger font size for quotes */
-  color: #5ab9ff; /* Blue color for quotes */
+/* Hero section */
+.projects-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
-.quote-section .quote {
-  font-size: 3rem; /* Larger quote marks */
-  color: #5ab9ff;
+.astro {
+  width: 160px;
+  max-width: 30vw;
+}
+
+.astro-left {
+  position: absolute;
+  transform: scaleX(-1);
+  left: 0;
+  top: 0;
+}
+
+.astro-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.projects-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.projects-title h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 12px 0;
+  letter-spacing: 2px;
+}
+
+/* Projects grid */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.project-row {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.project-box {
+  width: 260px;
+  height: 260px;
+  background: #51b6ff;
+  border-radius: 32px;
+  margin-bottom: 0;
+  box-shadow: 0 4px 24px 0 rgba(52,134,199,0.18);
+}
+
+/* Community */
+.community-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.1rem;
+  margin: 64px 0 32px 0;
+  letter-spacing: 2px;
+}
+
+/* Join button */
+.join-btn {
+  background: #32aaff;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 48px;
+  margin-top: 32px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 1px;
+}
+.join-btn:hover {
+  background: #1e7fc2;
+  transform: scale(1.04);
 }
 
 /* Adjustments for smaller screens */
