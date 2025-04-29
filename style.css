@@ -291,6 +291,24 @@ nav ul li a:hover {
   height: auto; /* Maintain aspect ratio */
 }
 
+@media (max-width: 900px) {
+  .mission-img {
+    width: 200px;
+    max-width: 80vw;
+    margin-top: 24px;
+    margin-bottom: 0;
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-img {
+    width: 140px;
+    max-width: 90vw;
+    margin-top: 16px;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .mission {
@@ -475,7 +493,7 @@ nav ul li a:hover {
 
 .difference-img {
   position: absolute;
-  top: 50px; /* Adjust position */
+  top: 150px; /* Adjust position */
   right: 50px; /* Adjust position */
   width: 200px; /* Larger image size */
 }
@@ -517,7 +535,9 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Center vertically */
   z-index: 1;
+  position: relative;
 }
 
 .projects-title h1 {
@@ -527,6 +547,12 @@ nav ul li a:hover {
   text-align: center;
   margin: 0 0 12px 0;
   letter-spacing: 2px;
+}
+
+/* Move arrow-down inside .projects-title and remove margin-top */
+.arrow-down {
+  margin: 24px auto 0 auto;
+  position: static;
 }
 
 /* Projects grid */
@@ -615,6 +641,34 @@ nav ul li a:hover {
 .learn-more-btn:hover {
   background: #1e7fc2;
   transform: scale(1.04);
+}
+
+/* Arrow Down */
+.arrow-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 32px auto 0 auto;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  animation: bounce 1.5s infinite;
+}
+
+.arrow-down span {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 28px solid #32aaff;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(16px);}
 }
 
 /* Adjustments for smaller screens */
@@ -717,5 +771,114 @@ nav ul li a:hover {
 
   footer {
     font-size: 0.8rem; /* Reduce footer text size */
+  }
+}
+
+/* Responsive fixes for About Page */
+
+@media (max-width: 900px) {
+  .why-cybersecurity {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 0;
+    min-height: unset;
+  }
+  .cyber-grid {
+    width: 95vw;
+    max-width: 400px;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 12px;
+    height: auto;
+  }
+  .cyber-box {
+    width: 44vw;
+    min-width: 120px;
+    max-width: 180px;
+    min-height: 120px;
+    height: auto;
+    max-height: none;
+    padding: 12px 6px 10px 6px;
+    overflow: visible;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .cyber-box h3, .cyber-box p {
+    font-size: 0.95rem;
+    margin: 6px 0 0 0;
+  }
+  .why-cybersecurity-text {
+    max-width: 95vw;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+  .why-cybersecurity h2 {
+    font-size: 1.1rem;
+  }
+  .why-cybersecurity p {
+    font-size: 0.97rem;
+    text-align: center;
+    padding-top: 0;
+    align-self: center;
+    max-width: 95vw;
+  }
+  .difference {
+    padding: 24px 0 0 0;
+    text-align: center;
+    position: static;
+  }
+  .difference ul {
+    padding-left: 0;
+    list-style-position: inside;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  .difference-img {
+    display: block;
+    margin: 32px auto 0 auto;
+    width: 120px;
+    max-width: 60vw;
+    position: static;
+  }
+  .perks {
+    padding-top: 160px; /* Adjust this value to match the astronaut's height */
+  }
+}
+
+@media (max-width: 600px) {
+  .cyber-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 90vw;
+    max-width: 320px;
+  }
+  .cyber-box {
+    width: 80vw;
+    max-width: 320px;
+    min-height: 70px;
+    font-size: 0.9rem;
+  }
+  .why-cybersecurity h2 {
+    font-size: 1rem;
+  }
+  .why-cybersecurity p {
+    font-size: 0.9rem;
+    text-align: center;
+    padding-top: 0;
+    align-self: center;
+    max-width: 98vw;
+  }
+  .difference-img {
+    width: 90px;
+    max-width: 80vw;
+    margin-top: 20px;
   }
 }

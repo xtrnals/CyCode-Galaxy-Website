@@ -27,17 +27,20 @@
       <img src="images/astro-left.png" alt="Astronaut Left" class="astro astro-left">
       <div class="projects-title">
         <h1>PROJECTS TO<br>DISCOVER</h1>
+        <div class="arrow-down" onclick="document.getElementById('projects-list').scrollIntoView({ behavior: 'smooth' });">
+          <span></span>
+        </div>
       </div>
       <img src="images/astro-right.png" alt="Astronaut Right" class="astro astro-right">
     </section>
-    <section class="projects-list">
+    <section id="projects-list" class="projects-list">
       <div class="project-row">
         <div class="project-card">
           <h2>PROJECT 1</h2>
           <div class="project-box"></div>
         </div>
         <div class="project-card">
-          <h2>PROJECT 1</h2>
+          <h2>PROJECT 2</h2>
           <div class="project-box"></div>
         </div>
       </div>
