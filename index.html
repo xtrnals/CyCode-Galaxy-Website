@@ -10,6 +10,7 @@
 <body>
   <header class="navbar">
     <div class="logo">LOGO</div>
+    <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -70,11 +71,11 @@
     <p>Explore a sneak peek of our exciting lessons and start your journey to becoming a cyber hero!</p>
     <div class="lesson-cards">
       <!-- Add lesson preview cards here -->
-      <div class="card">
+      <div class="perk-card">
         <h3>Lesson 1: Cyber Basics</h3>
-        <p>Learn the fundamentals of cybersecurity and coding.</p>
+        <p>Learn the fundamentals of cybersecurity and coding.</p>  
       </div>
-      <div class="card">
+      <div class="perk-card">
         <h3>Lesson 2: Threat Detection</h3>
         <p>Identify and mitigate online threats like a pro.</p>
       </div>
@@ -94,7 +95,7 @@
   
   <section class="cta">
     <h2>READY TO BECOME A CYBER HERO?</h2>
-    <p>Join the adventure! Learn to code, solve cyber puzzles, and earn awesome certifications—one challenge at a time!</p>
+    <p>Join the adventure! Learn to code, solve cyber puzzles, and earn awesome certifications — one challenge at a time!</p>
     <button class="play-now-btn">PLAY NOW</button>
     <div class="cta-characters">
       <img src="images/alien-and-astronaut.png" alt="Alien and Astronaut" />
@@ -104,5 +105,21 @@
   <footer>
     <p>&copy; 2025 CyCode Galaxy</p>
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.navbar nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      document.body.classList.toggle('sidebar-open');
+    });
+    // Optional: close sidebar when clicking a link
+    document.querySelectorAll('.navbar nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        document.body.classList.remove('sidebar-open');
+      });
+    });
+    </script>
 </body>
 </html>

@@ -540,6 +540,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 0 24px;
 }
 
 .astro-left,
@@ -547,21 +548,20 @@ nav ul li a:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 30vw;           /* Responsive width */
-  max-width: 320px;      /* Prevents them from being too large on desktop */
-  min-width: 140px;      /* Ensures visibility on mobile */
+  width: 300px;
+  max-width: 35vw;
   z-index: 1;
   pointer-events: none;
   user-select: none;
 }
 
 .astro-left {
-  left: 20px;
-  transform: translateY(-50%) scaleX(-1); /* Flip horizontally and center vertically */
+  left: 40px;
+  transform: translateY(-50%) scaleX(-1);
 }
 
 .astro-right {
-  right: 20px;
+  right: 40px;
   transform: translateY(-50%);
 }
 
@@ -595,36 +595,51 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 40px 0 0 0;
 }
 
 .project-row {
   display: flex;
   justify-content: center;
-  gap: 64px;
-  margin-bottom: 64px;
+  gap: 48px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
 }
 
 .project-card {
+  background: #12205a;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 rgba(52,134,199,0.12);
+  padding: 28px 18px 22px 18px;
+  margin: 0 12px;
+  width: 260px;
+  min-width: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(52,134,199,0.22);
 }
 
 .project-card h2 {
   font-family: 'Press Start 2P', monospace;
-  font-size: 2rem;
-  margin-bottom: 12px;
-  letter-spacing: 2px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #5ab9ff;
+  text-align: center;
 }
 
 .project-box {
-  width: 260px;
-  height: 260px;
-  background: #51b6ff;
-  border-radius: 32px;
+  width: 100%;
+  height: 120px;
+  background: #3486c7;
+  border-radius: 18px;
   margin-bottom: 0;
-  box-shadow: 0 4px 24px 0 rgba(52,134,199,0.18);
 }
 
 /* Community */
@@ -995,5 +1010,129 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+  }
+}
+
+/* Responsive Navbar Sidebar */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #5ab9ff;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1002;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 16px 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .navbar nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 220px;
+    background: #0a0730;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+    z-index: 1001;
+    padding-top: 60px;
+  }
+  .navbar nav.open {
+    transform: translateX(0);
+  }
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 0 0 24px;
+    margin: 0;
+  }
+  .navbar nav ul li {
+    margin: 0;
+  }
+  .navbar .logo {
+    z-index: 1002;
+  }
+  body.sidebar-open {
+    overflow: hidden;
+  }
+}
+
+/* Responsive Projects Hero */
+@media (max-width: 900px) {
+  .projects-hero {
+    min-height: 60vh;
+    padding: 0 8px;
+  }
+  .projects-title h1 {
+    font-size: 1.5rem;
+  }
+  .astro-left, .astro-right {
+    width: 90px;
+    max-width: 25vw;
+  }
+}
+@media (max-width: 600px) {
+  .projects-hero {
+    min-height: 40vh;
+    flex-direction: column;
+    padding: 0 2vw;
+  }
+  .projects-title h1 {
+    font-size: 1.1rem;
+  }
+  .astro-left, .astro-right {
+    width: 60px;
+    max-width: 20vw;
+  }
+}
+
+/* Responsive Projects List */
+@media (max-width: 900px) {
+  .project-row {
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+  }
+  .project-card {
+    width: 90vw;
+    max-width: 320px;
+    min-width: 0;
+    padding: 18px 8px 16px 8px;
+  }
+  .project-box {
+    height: 90px;
+  }
+}
+@media (max-width: 600px) {
+  .projects-list {
+    padding: 16px 0 0 0;
+  }
+  .project-card {
+    width: 96vw;
+    max-width: 98vw;
+    padding: 12px 4px 10px 4px;
+  }
+  .project-box {
+    height: 60px;
+  }
+  .community-title {
+    font-size: 1.2rem;
+    margin: 32px 0 18px 0;
+  }
+  .join-btn {
+    font-size: 1.1rem;
+    padding: 10px 24px;
+    border-radius: 24px;
   }
 }
