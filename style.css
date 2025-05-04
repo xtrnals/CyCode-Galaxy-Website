@@ -321,25 +321,26 @@ nav ul li a:hover {
 }
 
 .mission-img {
-  max-width: 45%; /* Slightly reduce the width of the image */
-  height: auto; /* Maintain aspect ratio */
+  width: 30vw;
+  min-width: 120px;
+  height: auto;
+  flex-shrink: 1;
+  display: block;
 }
 
 @media (max-width: 900px) {
   .mission-img {
-    width: 200px;
-    max-width: 80vw;
-    margin-top: 24px;
-    margin-bottom: 0;
-    position: static;
+    width: 180px;
+    max-width: 60vw;
+    min-width: 100px;
+    margin: 0 auto 16px auto;
   }
 }
-
 @media (max-width: 600px) {
   .mission-img {
-    width: 140px;
-    max-width: 90vw;
-    margin-top: 16px;
+    width: 120px;
+    max-width: 80vw;
+    margin: 0 auto 12px auto;
   }
 }
 
@@ -389,6 +390,8 @@ nav ul li a:hover {
   width: 100vw;
   min-height: 90vh;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-bottom: 0;
 }
 
 .cyber-grid {
@@ -444,7 +447,7 @@ nav ul li a:hover {
 }
 
 .cyber-box h3 {
-  font-size: 1.13rem;
+  font-size: 1.1rem;
   margin: 8px 0 6px 0;
   font-family: 'Press Start 2P', monospace;
   color: #0a1a3a;
@@ -946,6 +949,55 @@ nav ul li a:hover {
 
 /* Responsive fixes for About Page */
 
+@media (max-width: 1180px) and (min-width: 901px) {
+  .why-cybersecurity {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    padding: 32px 0 24px 0;
+    min-height: unset;
+  }
+  .cyber-grid {
+    width: 95vw;
+    max-width: 420px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 18px;
+    margin: 0 auto 12px auto;
+    height: auto;
+    justify-items: center;
+  }
+  .cyber-box {
+    width: 100%;
+    min-width: 120px;
+    max-width: 180px;
+    min-height: 120px;
+    height: auto;
+  }
+  .why-cybersecurity-text {
+    max-width: 95vw;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin: 0 auto;
+  }
+  .cyber-box h3 {
+    font-size: 0.95rem;
+  }
+  .why-cybersecurity h2 {
+    font-size: 1.5rem;
+  }
+  .why-cybersecurity p {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 50px;
+    align-self: center;
+    max-width: 95vw;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 900px) {
   .why-cybersecurity {
     flex-direction: column;
@@ -968,18 +1020,8 @@ nav ul li a:hover {
     max-width: 180px;
     min-height: 120px;
     height: auto;
-    max-height: none;
-    padding: 12px 6px 10px 6px;
-    overflow: visible;
-    word-break: word-break;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .cyber-box h3, .cyber-box p {
     font-size: 0.95rem;
-    margin: 6px 0 0 0;
+    padding: 12px 6px 10px 6px;
   }
   .why-cybersecurity-text {
     max-width: 95vw;
@@ -988,39 +1030,113 @@ nav ul li a:hover {
     height: auto;
   }
   .why-cybersecurity h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+  }
+  .cyber-box h3 {
+    font-size: 0.95rem;
   }
   .why-cybersecurity p {
-    font-size: 0.97rem;
+    font-size: 1rem;
     text-align: center;
-    padding-top: 0;
+    padding-top: 50px;
     align-self: center;
     max-width: 95vw;
   }
-  .difference {
-    padding: 24px 0 0 0;
+  .mission {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    height: auto;
+  }
+  .mission-content {
+    max-width: 95vw;
     text-align: center;
-    position: static;
+    margin-bottom: 24px;
   }
-  .difference ul {
-    padding-left: 0;
-    list-style-position: inside;
-    z-index: 2;
-    position: relative;
+  .mission-img {
+    max-width: 320px;
+    width: 80vw;
+    margin: 0 auto 24px auto;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-cybersecurity {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 0;
+    min-height: unset;
+  }
+  .cyber-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 90vw;
+    max-width: 320px;
+  }
+  .cyber-box {
+    width: 80vw;
+    max-width: 320px;
+    min-height: 70px;
+    font-size: 0.9rem;
+  }
+  .why-cybersecurity-text {
+    max-width: 98vw;
+    height: auto;
+  }
+  .why-cybersecurity h2 {
+    font-size: 1.1rem;
+  }
+  .why-cybersecurity p {
+    font-size: 0.9rem;
     text-align: center;
+    padding-top: 0;
+    align-self: center;
+    max-width: 98vw;
+  }
+  .mission {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+    height: auto;
+  }
+  .mission-content {
+    max-width: 98vw;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .mission-img {
+    max-width: 180px;
+    width: 80vw;
+    margin: 0 auto 16px auto;
     display: block;
-    margin: 0 auto;
   }
-  .difference-img {
-    display: block;
-    margin: 32px auto 0 auto;
-    width: 120px;
-    max-width: 60vw;
-    position: static;
-  }
-  .perks {
-    padding-top: 160px; /* Adjust this value to match the astronaut's height */
-  }
+}
+
+.difference {
+  padding: 24px 0 0 0;
+  text-align: center;
+  position: static;
+}
+.difference ul {
+  padding-left: 0;
+  list-style-position: inside;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.difference-img {
+  display: block;
+  margin: 32px auto 0 auto;
+  width: 120px;
+  max-width: 60vw;
+  position: static;
+}
+.perks {
+  padding-top: 160px; /* Adjust this value to match the astronaut's height */
 }
 
 @media (max-width: 600px) {
