@@ -12,17 +12,24 @@ body {
 /* Navbar styling */
 .navbar {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: space-between; /* Logo left, nav right */
+  align-items: center;
+  padding: 20px 40px;
   text-transform: uppercase;
+}
+
+.logo {
+  margin-right: 32px;
 }
 
 nav ul {
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-end; /* Align links to the right */
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 32px;
 }
 
 nav ul li {
@@ -39,6 +46,19 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #5ab9ff; /* Change color on hover */
+}
+
+/* Add or update this logo styling */
+.logo img {
+  height: 72px;
+  width: auto;
+  display: block;
+  padding: 4px 8px;
+  transition: transform 0.2s;
+}
+
+.logo img:hover {
+  transform: scale(1.07) rotate(-2deg);
 }
 
 /* Lessons Preview Section */
@@ -387,11 +407,11 @@ nav ul li a:hover {
   justify-content: center; /* Center both grid and text horizontally */
   padding: 0;              /* Remove left padding */
   gap: 400px;               /* Slightly more space between grid and text */
-  width: 100vw;
+  width: 100%;
   min-height: 90vh;
   box-sizing: border-box;
   flex-wrap: wrap;
-  margin-bottom: 0;
+  margin-bottom: 64px;
 }
 
 .cyber-grid {
@@ -1130,7 +1150,7 @@ nav ul li a:hover {
 }
 .difference-img {
   display: block;
-  margin: 32px auto 0 auto;
+  margin: 32px auto 30px auto;
   width: 120px;
   max-width: 60vw;
   position: static;
@@ -1283,22 +1303,39 @@ nav ul li a:hover {
     transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(.4,2,.6,1);
     z-index: 1001;
-    padding-top: 60px;
+    padding-top: 0; /* Remove extra top padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
   }
   .navbar nav.open {
     transform: translateX(0);
+  }
+  .navbar .logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 32px 0 24px 24px; /* Space above and left of logo */
+    box-sizing: border-box;
   }
   .navbar nav ul {
     flex-direction: column;
     gap: 24px;
     padding: 0 0 0 24px;
-    margin: 0;
+    margin: 32px 0 0 0;
+    align-items: flex-start; /* Align menu items to the left */
+    width: 100%;
   }
   .navbar nav ul li {
     margin: 0;
+    width: 100%;
   }
-  .navbar .logo {
-    z-index: 1002;
+  .navbar nav ul li a {
+    text-align: left;
+    width: 100%;
+    display: block;
+    padding: 0;
   }
   body.sidebar-open {
     overflow: hidden;
