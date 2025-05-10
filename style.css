@@ -87,17 +87,17 @@ nav ul li a:hover {
 
   .hero {
     display: flex;
-    justify-content: space-between; /* Space between text and image */
-    align-items: center; /* Align items vertically */
-    flex-direction: row; /* Place text and image side by side */
-    height: 100vh; /* Full viewport height */
-    text-align: left; /* Align text to the left */
-    padding: 0 50px; /* Add padding for spacing */
-  }
+    justify-content: center; /* Center both items */
+    align-items: center;
+    flex-direction: row;
+    height: 70vh;
+    text-align: left;
+    padding: 40px 50px 0 50px;
+    gap: 40px; /* Add gap for spacing */
+}
   
   .hero-text {
-    flex: none; /* Allow text to take up available space */
-    margin-right: 50px; /* Add spacing between text and image */
+    margin-right: 100px; /* Remove right margin, use gap instead */
     max-width: 700px;
   }
   
@@ -105,7 +105,7 @@ nav ul li a:hover {
     position: static; /* Keep the image in its natural flow */
     top: 0; /* Align the image to the top */
     flex: none; /* Prevent the image from stretching */
-    margin-left: 50px; /* Reduce the left margin */
+    margin-left: 100px; /* Remove left margin */
     transition: margin-left 0.3s ease; /* Smooth transition for margin changes */
   }
   
@@ -114,7 +114,7 @@ nav ul li a:hover {
     height: auto; /* Maintain the natural height */
     object-fit: contain; /* Ensure the image scales proportionally */
     max-width: 50vw; /* Limit the image width to 50% of the viewport width */
-    max-height: 80vh; /* Limit the image height to 80% of the viewport height */
+    max-height: 70vh; /* Limit the image height to 80% of the viewport height */
     min-width: unset; /* Remove the minimum width constraint */
   }
   
@@ -136,7 +136,6 @@ nav ul li a:hover {
 
 .hero-text {
   flex: none; /* Prevent flexbox from stretching the text */
-  margin-right: 50px; /* Keep spacing between text and image */
   max-width: 700px; /* Limit the width of the text block */
   text-align: center; /* Center-align all text and the button */
 }
@@ -398,6 +397,82 @@ nav ul li a:hover {
   .mission-img {
     max-width: 90%; /* Further reduce image size */
   }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        min-height: unset;
+        padding: 24px 8px 0 8px;
+        gap: 24px;
+    }
+    .hero-text {
+        max-width: 320px;
+        width: 70vw;
+        margin: 0 auto 10px auto;
+        text-align: center;
+        display: block;
+    }
+    .hero-img {
+        margin-left: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .hero-img img {
+        max-width: 320px;
+        width: 70vw;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+    .hero-text button {
+        font-size: 1.1rem;
+        padding: 14px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 8px 0 8px;
+        gap: 18px;
+        height: auto;
+        width: 100%;
+    }
+    .hero-text {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto 10px auto;
+        text-align: center;
+        display: block;
+    }
+    .hero-img {
+        margin-left: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .hero-img img {
+        max-width: 320px;
+        width: 90vw;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
 }
 
 /* Why Cybersecurity Section */
