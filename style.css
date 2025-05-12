@@ -780,74 +780,6 @@ nav ul li a:hover {
     box-sizing: border-box;
     padding: 8px 4px 6px 4px;
   }
-  .featured-projects-title {
-    font-size: 1.2rem;
-    margin: 24px 0 16px 0;
-  }
-}
-
-.project-desc {
-  color: #fff;
-  font-size: 0.98rem;
-  margin: 0;
-  line-height: 1.4;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  text-align: left;
-}
-
-.project-user {
-  display: block;
-  margin-top: 10px;
-  color: #e0eaff;
-  font-size: 0.92rem;
-  font-weight: bold;
-  opacity: 0.9;
-  text-align: right;
-  width: 100%;
-  /* Add this to prevent overlap */
-  position: static;
-  background: none;
-  word-break: break-word;
-}
-
-@media (max-width: 900px) {
-  .project-row {
-    flex-direction: column;
-    gap: 28px;
-    align-items: center;
-    margin-bottom: 32px;
-  }
-  .project-card {
-    width: 90vw;
-    max-width: 340px;
-    min-width: 0;
-    padding: 18px 8px 16px 8px;
-    margin: 0 0 24px 0;
-  }
-  .project-box {
-    min-height: 70px;
-    padding: 12px 8px 8px 8px;
-  }
-}
-
-@media (max-width: 600px) {
-  .projects-list {
-    padding: 16px 0 0 0;
-  }
-  .project-card {
-    width: 98vw;
-    max-width: 99vw;
-    min-width: 0;
-    padding: 10px 2vw 10px 2vw;
-    margin: 0 0 18px 0;
-  }
-  .project-box {
-    min-width: 0;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px 4px 6px 4px;
-  }
   .community-title {
     font-size: 1.2rem;
     margin: 32px 0 18px 0;
@@ -1431,6 +1363,16 @@ nav ul li a:hover {
 }
 
 /* Responsive Projects Hero */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .astro-left, .astro-right {
+    width: 200px;
+    max-width: 22vw;
+  }
+  .projects-title h1 {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 900px) {
   .projects-hero {
     min-height: 40vh;
@@ -1441,14 +1383,13 @@ nav ul li a:hover {
     justify-content: center;
     gap: 0;
   }
-    .astro-left, .astro-right {
-      width: 150px !important;
-      max-width: 32vw !important;
-    }
+  .astro-left, .astro-right {
+    width: 120px !important;
+    max-width: 18vw !important;
+  }
   .projects-title h1 {
-    font-size: 1.2rem;
-    padding: 0 8vw; /* Add horizontal padding to keep text away from astronauts */
-    word-break: break-word;
+    font-size: 1.1rem;
+    padding: 0 6vw;
   }
 }
 @media (max-width: 600px) {
@@ -1457,12 +1398,12 @@ nav ul li a:hover {
     padding: 0 1vw;
   }
   .astro-left, .astro-right {
-    width: 110px !important;
-    max-width: 40vw !important;
+    width: 80px !important;
+    max-width: 14vw !important;
   }
   .projects-title h1 {
-    font-size: 0.85rem;
-    padding: 0 14vw; /* More padding on very small screens */
+    font-size: 0.8rem;
+    padding: 0 10vw;
   }
 }
 
