@@ -639,6 +639,7 @@ nav ul li a:hover {
   justify-content: center;
   overflow: hidden;
   padding: 0 24px;
+  margin-top: -40px; 
 }
 
 .astro-left,
@@ -763,6 +764,9 @@ nav ul li a:hover {
 }
 
 @media (max-width: 600px) {
+  .projects-list {
+    padding: 16px 0 0 0;
+  }
   .project-card {
     width: 98vw;
     max-width: 99vw;
@@ -772,9 +776,13 @@ nav ul li a:hover {
   }
   .project-box {
     min-width: 0;
-    min-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
     padding: 8px 4px 6px 4px;
-    height: auto;
+  }
+  .featured-projects-title {
+    font-size: 1.2rem;
+    margin: 24px 0 16px 0;
   }
 }
 
@@ -840,9 +848,14 @@ nav ul li a:hover {
     box-sizing: border-box;
     padding: 8px 4px 6px 4px;
   }
-  .featured-projects-title {
+  .community-title {
     font-size: 1.2rem;
-    margin: 24px 0 16px 0;
+    margin: 32px 0 18px 0;
+  }
+  .join-btn {
+    font-size: 1.1rem;
+    padding: 10px 24px;
+    border-radius: 24px;
   }
 }
 
@@ -1420,29 +1433,36 @@ nav ul li a:hover {
 /* Responsive Projects Hero */
 @media (max-width: 900px) {
   .projects-hero {
-    min-height: 60vh;
-    padding: 0 8px;
+    min-height: 40vh;
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
   }
+    .astro-left, .astro-right {
+      width: 150px !important;
+      max-width: 32vw !important;
+    }
   .projects-title h1 {
-    font-size: 1.5rem;
-  }
-  .astro-left, .astro-right {
-    width: 90px;
-    max-width: 25vw;
+    font-size: 1.2rem;
+    padding: 0 8vw; /* Add horizontal padding to keep text away from astronauts */
+    word-break: break-word;
   }
 }
 @media (max-width: 600px) {
   .projects-hero {
-    min-height: 40vh;
-    flex-direction: column;
-    padding: 0 2vw;
-  }
-  .projects-title h1 {
-    font-size: 1.1rem;
+    min-height: 30vh;
+    padding: 0 1vw;
   }
   .astro-left, .astro-right {
-    width: 60px;
-    max-width: 20vw;
+    width: 110px !important;
+    max-width: 40vw !important;
+  }
+  .projects-title h1 {
+    font-size: 0.85rem;
+    padding: 0 14vw; /* More padding on very small screens */
   }
 }
 
@@ -1509,3 +1529,4 @@ nav ul li a:hover {
   text-align: right;
   width: 100%;
 }
+
