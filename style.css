@@ -3,11 +3,21 @@ body {
     font-family: 'Press Start 2P', cursive;
     background-color: #070032;
     color: white;
-    background-image: url('images/stars-background.png'); 
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Press Start 2P', monospace;
   }
+
+  #stars-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
   
 /* Navbar styling */
 .navbar {
