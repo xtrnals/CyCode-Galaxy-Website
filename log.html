@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="log.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="CyCode Galaxy Logo" />
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="lessons.html">LESSONS</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="certificate.html">CERTIFICATE</a></li>
+      <li><a href="log.html">SIGN-IN</a></li>
+    </ul>
+  </nav>
+  <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+</header>
+
+
+    <div class="container">
+        <div class="content">
+                <p class="box-logo">Cycode Galaxy</p>
+                <img class="astro-float" src="images/floating-astronaut.png" alt="">
+            <div class="description">
+                <div class="wavy">
+                    <span style="--a:1;">W</span>
+                    <span style="--a:2;">E</span>
+                    <span style="--a:3;">L</span>
+                    <span style="--a:4;">C</span>
+                    <span style="--a:5;">O</span>
+                    <span style="--a:6;">M</span>
+                    <span style="--a:7;">E</span>
+                    &nbsp;
+                    <span style="--a:8;">E</span>
+                    <span style="--a:9;">X</span>
+                    <span style="--a:10;">P</span>
+                    <span style="--a:11;">L</span>
+                    <span style="--a:12;">O</span>
+                    <span style="--a:13;">R</span>
+                    <span style="--a:14;">E</span>
+                    <span style="--a:15;">R</span>
+                    <span style="--a:16;">!</span>
+                </div>  
+
+                <p>Do you have what it takes to explore Cycode Universe?</p>
+                
+                <div class="icons">
+                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="log-box">
+            <div class="log-form login">
+                <form method="post" action="#">
+                    <h2>Sign In</h2>
+
+                    <div class="input-log">
+                        <span class="log-icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" name="username" id="username" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-log">
+                        <span class="log-icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" name="log-pass" id="log-pass" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-recover">
+                        <label><input type="checkbox">Remember me</label>
+                            <a href="#">Recover account</a>
+                    </div>
+
+                    <button type="submit" class="log-button">Log in</button>
+
+                    <p class="or">or</p>
+
+                    <div class="log-alternative">
+                        <a href="#"><i class='bx bxl-google'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    </div>
+
+                    <div class="sign-up">
+                        <p>Don't have an account yet?<a href="#" class="create-acc"> Create account</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="log-form createaccount">
+                <form method="post" action="#">
+                    <h2>Sign up</h2>
+
+                    <div class="input-log">
+                        <span class="log-icon"><i class='bx bxs-user' ></i></span>
+                        <input type="text" name="username" id="username" required>
+                        <label>Full name</label>
+                    </div>
+
+                    <div class="input-log">
+                        <span class="log-icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" name="username" id="username" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-log">
+                        <span class="log-icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" name="log-pass" id="log-pass" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="input-log">
+                        <span class="log-icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" name="log-pass" id="log-pass" required>
+                        <label>Confirm password</label>
+                    </div>
+
+                    <div class="remember-recover">
+                        <label><input type="checkbox">I agree to the terms & condition</label>
+                    </div>
+
+                    <button type="submit" class="log-button">Create Account</button>
+
+                    <div class="sign-up">
+                        <p>Already have an account?<a href="#" class="sign-in"> Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+<script src="javascript.js"></script>
+
+
+</body>
+</html>
