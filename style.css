@@ -71,6 +71,7 @@ nav ul li a {
   font-weight: bold;
   font-size: 0.9rem;
   transition: color 0.3s ease;
+  padding: 6px 0;
 }
 
 nav ul li a:hover {
