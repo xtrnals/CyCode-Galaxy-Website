@@ -221,6 +221,23 @@ nav ul li a:hover {
   color: #e0e6ed;
 }
 
+.python-card {
+  background: linear-gradient(rgba(10,7,48,0.72), rgba(10,7,48,0.72)), url('images/python-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.css-card {
+  background: linear-gradient(rgba(10,7,48,0.72), rgba(10,7,48,0.72)), url('images/css-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.cyber-card {
+  background: linear-gradient(rgba(10,7,48,0.72), rgba(10,7,48,0.72)), url('images/cybersecurity-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.hacking-card {
+  background: linear-gradient(rgba(10,7,48,0.72), rgba(10,7,48,0.72)), url('images/hacking-bg.png') center/cover no-repeat;
+  color: #fff;
+}
+
 @media (max-width: 900px) {
   .lesson-cards {
     grid-template-columns: 1fr;
