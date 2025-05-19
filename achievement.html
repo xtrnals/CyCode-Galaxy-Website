@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cycodes Achievement Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="achievement.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <canvas id="stars-bg"></canvas>
+
+   <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="CyCode Galaxy Logo">
+        </a>
+      </div>
+    <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="achievement.html">Achievements</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="log.html">Sign-In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mission Achievements Section -->
+  <section class="hero-section">
+    <h1>Mission Achievements</h1>
+    <p>
+      Track your progress as a space cadet! Every badge, mission,<br />
+      and level shows how far you’ve come in mastering code and cyber defense.
+    </p>
+  </section>
+
+  <!-- Learning Steps -->
+  <section class="hero-section">
+    <h1>Your Learning Starts Here!</h1>
+    <p>Complete lessons to unlock cool rewards and certificates.</p>
+    <div class="steps-grid">
+      <div class="step-card">🔓 <strong>Unlock Certificates</strong><br>Show off your skills, earn certifications, and track your progress.</div>
+      <div class="step-card">🏅 <strong>Collect Cool Badges</strong><br>Earn badges by completing lessons and milestones.</div>
+      <div class="step-card">📊 <strong>Progress Tracker</strong><br>Monitor your journey and stay motivated.</div>
+      <div class="step-card">🏆 <strong>Join the Ranking System</strong><br>Climb the leaderboard and become a legend.</div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="certificates-section">
+    <h2>Certificates Showcase</h2>
+    <p>Every certificate is a badge of honor — earned through dedication, learning, and cosmic-level problem solving.</p>
+    <br>
+    <div class="cert-grid">
+     <img src="images/scratch explorer.png" alt="Scratch Explorer Certificate" class="cert-image" />
+     <img src="images/junior space coder.png" class="cert-image" />
+     <img src="images/cyber hero basics.png" alt="Cyber Hero Basics Certificate" class="cert-image" />
+     <img src="images/safe surfer.png" alt="Safe Surfer" class="cert-image" />
+    </div>
+    <br>
+    <br>
+    <button id="exploreBtn">Explore More</button>
+  </section>
+
+  <!-- Badges -->
+  <section class="certificates-section">
+    <h2>Badges Showcase</h2>
+    <p>Collect your cosmic badges – each one earned by completing missions and mastering new coding skills.</p>
+    <div class="badge-grid">
+      <img src="images/badge1.jpg" alt="Badge 1" />
+      <img src="images/badge2.jpg" alt="Badge 2" />
+      <img src="images/badge3.jpg" alt="Badge 3" />
+      <img src="images/badge4.jpg" alt="Badge 4" />
+      <img src="images/badge5.jpg" alt="Badge 5" />
+      <img src="images/badge6.jpg" alt="Badge 6" />
+      <img src="images/badge7.jpg" alt="Badge 7" />
+      <img src="images/badge8.jpg" alt="Badge 8" />
+      <img src="images/badge9.jpg" alt="Badge 9" />
+      <img src="images/badge10.jpg" alt="Badge 10" />
+      <img src="images/badge11.jpg" alt="Badge 11" />
+      <img src="images/badge12.jpg" alt="Badge 12" />
+    </div>
+  </section>
+
+  <!-- Progress Tracker -->
+ <section class="progress-section">
+  <h2>Progress Tracker</h2>
+  <p>Watch your skills grow and your mission progress soar!</p>
+  <div class="progress-box">
+    <p>🚀 Introduction to Python <span style="float:right;">85%</span></p>
+    <div class="progress-bar"><div style="width: 85%;"></div></div>
+
+    <p>🛰️ Introduction to CSS <span style="float:right;">60%</span></p>
+    <div class="progress-bar"><div style="width: 60%;"></div></div>
+
+    <p>🛡️ Master CyberSecurity <span style="float:right;">40%</span></p>
+    <div class="progress-bar"><div style="width: 40%;"></div></div>
+
+    <p>👾 Ethical Hacking <span style="float:right;">25%</span></p>
+    <div class="progress-bar"><div style="width: 25%;"></div></div>
+  </div>
+</section>
+
+<!--ranking-->
+<section class="ranking-section">
+  <h2>Ranking System</h2>
+  <p>Your rank shows your status in the galaxy – the higher you go, the closer you are to becoming a legend.</p>
+  <div class="trophy-row">
+  <div class="trophy">
+    <img src="images/trophy.png" alt="Rank 1" />
+    <span class="trophy-caption">Bronze Rank</span>
+    <span class="trophy-tooltip">Beginner</span>
+  </div>
+  <div class="trophy">
+    <img src="images/trophy.png" alt="Rank 2" />
+    <span class="trophy-caption">Silver Rank</span>
+    <span class="trophy-tooltip">Rising Star</span>
+  </div>
+  <div class="trophy">
+    <img src="images/trophy.png" alt="Rank 3" />
+    <span class="trophy-caption">Gold Rank</span>
+    <span class="trophy-tooltip">Hero</span>
+  </div>
+  <div class="trophy">
+    <img src="images/trophy.png" alt="Rank 4" />
+    <span class="trophy-caption">Platinum Rank</span>
+    <span class="trophy-tooltip">Legend</span>
+  </div>
+</div>
+</section>
+
+<footer>
+  <img src="images/logo.png" alt="CyCode Galaxy Logo" class="footer-logo" />
+  <div class="footer-contact">
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:support@cycodegalaxy.com">support@cycodegalaxy.com</a>
+    </p>
+    <p>
+      <strong>Connect:</strong>
+      <a href="https://instagram.com/cycodegalaxy" target="_blank" title="Instagram" style="margin:0 8px;">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.facebook.com/share/18faBdCgSR/?mibextid=wwXIfr" target="_blank" title="Facebook" style="margin:0 8px;">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn" style="margin:0 8px;">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </p>
+  </div>
+  <p style="margin-top:10px;font-size:0.95em;opacity:0.7;">&copy; 2025 CyCode Galaxy. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="achievement.js"></script>
+
+</body>
+</html>
