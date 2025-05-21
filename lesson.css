@@ -10,12 +10,32 @@ body {
     background-color: #060140;
 }
 
-.lesson-page{
+/* Make all text use Press Start 2P */
+body,
+.lesson-page,
+.cyber-page,
+h1, h2, h3, h4, h5, h6,
+p, span, a, button,
+.text-box, .Level, .Title-text, .nav-btn, .card-box, .footer, .footer-box, .copyright {
+    font-family: 'Press Start 2P', monospace !important;
+    letter-spacing: 0.5px;
+}
+
+.lesson-page,
+.cyber-page {
     position: relative;
     width: 100%;
     height: 100vh;
+    margin-bottom: 60px; /* Add space below the cards before the footer */
 }
 
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .lesson-page,
+    .cyber-page {
+        margin-bottom: 40px;
+    }
+}
 
 .scroll-function .left-arrow{
     z-index: 10;
@@ -46,7 +66,8 @@ body {
 .Title-text{
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 48px;
+    margin-bottom: 0;
     line-height: 40px;
     letter-spacing: -0.5px;
 }
@@ -96,7 +117,7 @@ button{
 
 .Level{
     margin-left: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     letter-spacing: 1px;
 }
 
@@ -110,38 +131,94 @@ button{
     display: flex;
     justify-content: flex-start;
     padding-left: 60px;
-    overflow-x: auto;
-    gap: 21px;
     padding-right: 60px;
+    overflow-x: auto;
+    gap: 32px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .container::-webkit-scrollbar{
     width: 0;
 }
 
-.card-box{
+.card-box {
     width: 320px;
+    min-width: 320px;
+    height: 410px;
+    min-height: 410px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     background-color: #4918AB;
     flex-shrink: 0;
-    height: 330px;
+    transition: box-shadow 0.2s;
+    margin-bottom: 0;
 }
-
-
-.card-box img{
+.card-box img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 100%;
-    height: 160px;
+    height: 130px;
+    object-fit: cover;
 }
 
-.text-box{
+.text-box {
     padding-left: 18px;
     padding-right: 18px;
-    width: 290px;
+    width: 100%;
     margin-top: 10px;
+    box-sizing: border-box;
+}
+
+/* Card text improvements for readability and hierarchy */
+.card-box .text-box h1 {
+    font-size: 0.95rem;
+    color: #fff;
+    font-family: "Press Start 2P", monospace;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    text-align: left;
+    word-break: break-word;
+}
+
+.card-box .text-box p {
+    font-size: 0.73rem;
+    color: #e0eaff;
+    font-family: "DM Sans", Arial, sans-serif;
+    margin-top: 0;
+    text-align: left;
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* Responsive adjustments for card text */
+@media (max-width: 900px) {
+    .Level {
+        margin-left: 18px;
+        margin-bottom: 22px;
+    }
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 18px;
+    }
+    .card-box {
+        width: 90vw;
+        min-width: 90vw;
+        height: auto;
+        min-height: 0;
+    }
+    .card-box img {
+        height: 90px;
+    }
+    .card-box .text-box h1 {
+        font-size: 0.98rem;
+    }
+    .card-box .text-box p {
+        font-size: 0.78rem;
+    }
 }
 
 .text-box h1{
